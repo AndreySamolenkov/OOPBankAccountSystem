@@ -28,8 +28,8 @@ class BankAccount:
 
 
 # create two bank accounts
-account1 = BankAccount("John Doe", 1000)
-account2 = BankAccount("Jane Doe", 500)
+account1 = BankAccount("Bob", 1000)
+account2 = BankAccount("Jack", 500)
 
 # check the balance of account1
 print(account1.display_balance())

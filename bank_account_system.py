@@ -27,18 +27,22 @@ class BankAccount:
     return f'The balance in your account is ${self.balance}.\n'
 
 
-account_holder1 = BankAccount('Bob', 1200)
-print(account_holder1)
-print(account_holder1.display_balance())
-withdraw_message = account_holder1.withdraw(300)
-print(withdraw_message)
-print(account_holder1.display_balance())
+# create two bank accounts
+account1 = BankAccount("John Doe", 1000)
+account2 = BankAccount("Jane Doe", 500)
 
-account_holder2 = BankAccount('Jack', 2400)
-print(account_holder2)
-print(account_holder2.display_balance())
-withdraw_message = account_holder2.withdraw(500)
-print(withdraw_message)
-print(account_holder2.display_balance())
+# check the balance of account1
+print(account1.display_balance())
 
-print(account_holder1.transfer(400, account_holder2))
+# withdraw from account1
+print(account1.withdraw(100))
+
+# check the balance of account1 again
+print(account1.display_balance())
+
+# transfer from account1 to account2
+print(account1.transfer(200, account2))
+
+# check the balance of account1 and account2
+print(account1.display_balance())
+print(account2.display_balance())
